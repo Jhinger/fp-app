@@ -6,9 +6,19 @@ import getUsers from './utils/getUsers.js';
 import createUser from './utils/createUser.js';
 import deleteUser from './utils/deleteUser.js';
 import getDefaultUsers from './utils/defaultUsers';
+import PaginateUsers from './components/PaginateUsers.vue';
+import { NUM_USERS_PER_PAGE } from './constants/index.js';
 
 let users = ref();
 let isError = ref(false);
+let currRange = ref();
+
+function onUpdatePage(page) {
+	currRange.value = users.value.slice(
+		(page - 1) * NUM_USERS_PER_PAGE,
+		(page - 1) * NUM_USERS_PER_PAGE + NUM_USERS_PER_PAGE
+	);
+}
 
 async function onDeleteUser(identification) {
 	let res = await deleteUser(identification);
@@ -18,6 +28,8 @@ async function onDeleteUser(identification) {
 	}
 
 	users.value = users.value.filter((user) => user.id !== identification);
+	currRange.value = currRange.value.filter((user) => user.id !== identification);
+
 	console.log(res.message);
 }
 
@@ -43,6 +55,8 @@ onMounted(async () => {
 
 	console.log('Data: ', data);
 	users.value = data;
+
+	currRange.value = users.value.slice(0, 5);
 });
 </script>
 
@@ -50,7 +64,7 @@ onMounted(async () => {
 	<div class="my-12 flex h-full w-full flex-col items-center justify-center">
 		<CreateUserModal @create-user="onCreateUser" />
 		<UserProfile
-			v-for="(user, index) in users"
+			v-for="(user, index) in currRange"
 			:userName="user.username"
 			:id="user.id"
 			:biography="user.biography"
@@ -62,5 +76,6 @@ onMounted(async () => {
 				<img :src="user.avatar" alt="" width="50" height="50" />
 			</template>
 		</UserProfile>
+		<PaginateUsers v-if="users" :numUsers="users.length" @update-page="onUpdatePage" />
 	</div>
 </template>
