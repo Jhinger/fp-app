@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "username": "first",
+      "id": "12345",
+      "biography": "last",
+      "avatar": "https://avataaars.io/?accessoriesType=Kurt&avatarStyle=Circle&clotheColor=Blue02&clotheType=Overall&eyeType=EyeRoll&eyebrowType=Default&facialHairColor=BlondeGolden&facialHairType=MoustacheFancy&hairColor=Platinum&hatColor=Gray01&mouthType=Disbelief&skinColor=Black&topType=LongHairBob"
+    },
+    {
+      "username": "first",
+      "id": "t93zgyxc6wcv_i2oaVnMg",
+      "biography": "last",
+      "avatar": "https://avataaars.io/?accessoriesType=Kurt&avatarStyle=Circle&clotheColor=Blue02&clotheType=Overall&eyeType=EyeRoll&eyebrowType=Default&facialHairColor=BlondeGolden&facialHairType=MoustacheFancy&hairColor=Platinum&hatColor=Gray01&mouthType=Disbelief&skinColor=Black&topType=LongHairBob"
+    },
+    {
+      "username": "another",
+      "id": "5GeobHMkaDouGOplHgOHG",
+      "biography": "user",
+      "avatar": "https://avataaars.io/?accessoriesType=Prescription02&avatarStyle=Circle&clotheColor=Heather&clotheType=ShirtScoopNeck&eyeType=WinkWacky&eyebrowType=UnibrowNatural&facialHairColor=Red&facialHairType=BeardMagestic&hairColor=Brown&hatColor=Gray02&mouthType=Grimace&skinColor=Black&topType=LongHairFrida"
+    },
+    {
+      "username": "first",
+      "id": "9Q7C3El0ad4xmnVP7eACP",
+      "biography": "last",
+      "avatar": "https://avataaars.io/?accessoriesType=Prescription02&avatarStyle=Circle&clotheColor=White&clotheType=BlazerShirt&eyeType=WinkWacky&eyebrowType=Angry&facialHairColor=Platinum&facialHairType=MoustacheMagnum&hairColor=BrownDark&hatColor=PastelBlue&mouthType=ScreamOpen&skinColor=DarkBrown&topType=NoHair"
+    }
+  ]
+}

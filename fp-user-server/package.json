@@ -1,0 +1,28 @@
+{
+  "name": "fp-user-server",
+  "version": "1.0.0",
+  "description": "User server for Fresh Prep application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/*.spec.js",
+    "test:watch": "mocha --watch ./src/tests/*.spec.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "lowdb": "^6.0.1",
+    "nanoid": "^4.0.2",
+    "random-avatar-generator": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  }
+}
